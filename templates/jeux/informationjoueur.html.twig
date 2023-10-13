@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Informations
+{% endblock %}
+
+{% block body %}
+		<div class="card">
+			<img src="/dossierImage/{{joueur.avatar}}" alt="pdp" style="width:100%">
+			<h1>{{joueur.nomJoueur}}</h1>
+			<h1>{{joueur.pseudonyme}}</h1>
+			<br>
+			<a href="{{path('editJoueur',{'id':joueur.id})}}">
+				<button type="button" class="btn btn-outline-primary">Modifier le Profil</button>
+			</a>
+			<br>
+			<a href="{{path('deletejoueur',{'id':joueur.id})}}">
+				<button type="button" class="btn btn-outline-danger">Supprimer le Profil</button>
+			</a>
+			<br>
+		</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{{ form_start(formulaire) }}
+
+	{#  {{ form_widget(formulaire) }} #}
+	<div class="container">
+		<div class="form_group">
+			{{form_row(formulaire.nomJoueur,{"label":"Nom: ", "attr":{"placeholder":"Votre Nom", "class":"form-control"}})}}
+		</div>
+		<div class="form_group">
+			{{form_row(formulaire.pseudonyme,{"label":"Pseudo: ", "attr":{"placeholder":"Votre Pseudo", "class":"form-control"}})}}
+		</div>
+		<div class="form_group">
+			{{form_row(formulaire.avatar,{"label":"Photo de Profil: ", "attr":{"placeholder":"", "class":"form-control"}})}}
+		</div>
+		<div class="form_group">
+			{{form_row(formulaire.birthdate,{"label":" Date de naissance: ", "attr":{}})}}
+		</div>
+		<div class="form_group">
+			{{form_row(formulaire.email,{"label":"Email: ", "attr":{"placeholder":"Votre Adresse Mail", "class":"form-control"}})}}
+		</div>
+		<div class="form_group">
+			{{form_row(formulaire.password,{"label":"Mot de Passe: ", "attr":{"placeholder":"Votre Mot de Passe", "class":"form-control"}})}}
+		</div>
+        {{form_row(formulaire.envoyer,{"attr":{"class":"btn btn-info"}})}}
+	</div>
+	{{ form_end(formulaire) }}
+{% endblock %}
